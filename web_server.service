@@ -1,0 +1,11 @@
+[Unit]
+Description=A service to start the web_server 
+After=network.target
+[Service]
+User=ubuntu
+Group=www-data
+WorkingDirectory=/home/ubuntu/
+ExecStart=/usr/bin/python3  /home/ubuntu/cc-project1/web_server.py
+Restart=always
+[Install]
+WantedBy=multi-user.target

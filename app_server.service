@@ -1,0 +1,10 @@
+[Unit]
+Description=App tier req queue processor
+After=multi-user.target
+[Service]
+Type=simple
+Restart=always
+ExecStart=/usr/bin/python3 /home/ubuntu/cc-project1/app_server.py
+User=ubuntu
+[Install]
+WantedBy=multi-user.target
